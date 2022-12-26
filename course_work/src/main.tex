@@ -36,6 +36,15 @@
 
 \usepackage{svg}
 
+\newcommand{\anonsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+
+\usepackage{caption}
+\captionsetup[figure]{
+    labelformat = simple,
+    labelsep = endash,
+    name = Рисунок
+}
+
 \newcommand{\authorName}{Марухленко Д.С.}
 \newcommand{\workType}{Комплексная лабораторная работа}
 \newcommand{\workName}{Устройство для измерения угловых перемещений}
@@ -48,11 +57,12 @@
     \input{mainpage}
     \tableofcontents
     \newpage
+    \input{intro.tex}
     \input{task}
     \input{stages}
-    \input{analys}
     \input{task1.tex}
     \input{task2.tex}
     \input{task3.tex}
+    \input{end.tex}
     \input{application.tex}
 \end{document}
